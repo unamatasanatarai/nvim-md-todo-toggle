@@ -1,4 +1,4 @@
-local module = require("nvim-md-todo-toggle")
+local module = require("nvim-md-todo-toggle.init")
 
 local M = {}
 M.config = {}
