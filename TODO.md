@@ -1,9 +1,6 @@
 TODO
 ====
 
-- [ ] test this crap
-- [ ] test this crap
-- [ ] test this crap
-- [ ] test this crap
-- [ ] test this crap
-- [ ] test this crap
+- [ ] Run first test
+- [x] Lorem ipsum dolor
+- [ ] set amet and lorem
