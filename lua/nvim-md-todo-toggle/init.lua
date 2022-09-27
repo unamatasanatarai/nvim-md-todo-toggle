@@ -24,5 +24,5 @@ end
 --)
 
 return {
-  toggle
+  toggle = toggle
 }
