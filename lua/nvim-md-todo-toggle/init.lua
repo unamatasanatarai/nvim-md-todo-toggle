@@ -1,5 +1,8 @@
 local function setup(parameters)
+  print("printing from setup()")
 end
+
+print("I have been started")
 
 local function toggle_todo_marker()
   local line = vim.api.nvim_get_current_line()
