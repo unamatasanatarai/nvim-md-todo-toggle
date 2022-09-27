@@ -15,13 +15,6 @@ local function toggle()
   vim.cmd(":call cursor(" .. cursor_pos[1] .. ", " .. cursor_pos[2] + 1 .. ")")
 end
 
---vim.keymap.set("n", "<leader>t", toggle, { desc = "jurst ran it", noremap = true, silent = true })
---
---vim.api.nvim_create_user_command(
---  'TDToggle',
---  toggle,
---  { bang = true, desc = 'bang, what is bang?' }
---)
 
 return {
   toggle = toggle
