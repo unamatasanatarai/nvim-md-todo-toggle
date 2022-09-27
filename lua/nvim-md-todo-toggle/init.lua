@@ -1,5 +1,3 @@
-print("I have been started")
-
 local function toggle()
   local line = vim.api.nvim_get_current_line()
   local opened, _ = string.find(line, "- %[ %]")
