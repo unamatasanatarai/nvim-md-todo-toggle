@@ -1,27 +1,39 @@
 # NeoVim Markdown style Todo Toggler
 
-## installation
+## Installation
 
-packer:
+Packer:
 ```
   use { "unamatasanatarai/nvim-md-todo-toggle" }
 ```
 
 
 
-## usage
+## Usage
 
-setup your keybinding
-```
-  vim.keymap.set("n", "<leader>t", M.toggle, { desc = "shortcut to run the command", noremap = true, silent = true })
-```
-
-## options
+Setup your keybinding
 
 ```
-.setup{marker="x"}
+local status_ok, todo = pcall(require, "nvim-md-todo-toggle")
+if not status_ok then
+  return
+end
+
+todo.setup {
+  marker = "x"
+}
+
+vim.keymap.set("n", "<leader>t", todo.toggle, { desc = "Toggle a readme marker", noremap = true, silent = true })
 ```
 
-command is: `:TDToggle`
+## Options
+
+```
+.setup{
+  marker = "x"
+}
+```
+
+Command is: `:TDToggle`
 
 ![Nvim Todo Markdown Toggler in action](toggler.gif)
