@@ -24,6 +24,7 @@ todo.setup {
 }
 
 vim.keymap.set("n", "<leader>t", todo.toggle, { desc = "Toggle a readme marker", noremap = true, silent = true })
+vim.keymap.set("n", "<leader>tn", todo.add, { desc = "Add a new todo entry from within nvim", noremap = true, silent = true })
 ```
 
 ## Options
@@ -34,6 +35,9 @@ vim.keymap.set("n", "<leader>t", todo.toggle, { desc = "Toggle a readme marker",
 }
 ```
 
-Command is: `:TDToggle`
+## Commands
+
+- `:TDToggle`
+- `:TDAdd`
 
 ![Nvim Todo Markdown Toggler in action](toggler.gif)

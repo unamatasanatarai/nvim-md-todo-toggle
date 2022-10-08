@@ -1,7 +1,9 @@
 local M = {}
+
 M.config = {
   marker = "x"
 }
+
 M.setup = function(args)
   M.config = vim.tbl_deep_extend("force", M.config, args or {})
 
@@ -10,8 +12,12 @@ M.setup = function(args)
     M.toggle,
     { bang = true, desc = 'Toggle between - [ ] and - [x]' }
   )
+  vim.api.nvim_create_user_command(
+    'TDAdd',
+    M.add,
+    { bang = true, desc = 'Inject a todo item in the next line' }
+  )
 end
-
 
 M.toggle = function()
   local line = vim.api.nvim_get_current_line()
@@ -28,5 +34,9 @@ M.toggle = function()
   vim.cmd(":call cursor(" .. cursor_pos[1] .. ", " .. cursor_pos[2] + 1 .. ")")
 end
 
+M.add = function()
+  vim.cmd(":norm o- [ ] ")
+  vim.cmd(":startinsert!")
+end
 
 return M
